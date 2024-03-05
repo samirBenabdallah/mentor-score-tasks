@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("woff"); /* Update the path accordingly */
+  font-style: normal;
+}
+:root {
+  /* component colors */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  /* component background */
+  --Light-red-bg: hsla(0, 100%, 67%, 0.11);
+  --Orangey-yellow-bg: hsla(39, 100%, 56%, 0.11);
+  --Green-teal-bg: hsla(166, 100%, 37%, 0.11);
+  --Cobalt-blue-bg: hsla(234, 85%, 45%, 0.11);
+  /* naturel */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  --left-side-bg: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  --left-side-circle-bg: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0.226)
+  );
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-primary {
+  color: var(--Light-lavender);
+}
+.text-secondary {
+  color: var(--Dark-gray-blue);
+}
+.text-white {
+  color: var(--White);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk";
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--Pale-blue);
+}
+body > main {
+  background-color: var(--White);
+  width: 550px;
+  height: 400px;
+  display: flex;
+  border-radius: 10px;
+}
+body > main > * {
+  width: 50%;
+}
+body > main > aside {
+  text-align: center;
+  padding-inline: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--left-side-bg);
+  border-radius: inherit;
+}
+body > main > aside > div {
+  background: var(--left-side-circle-bg);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  flex-direction: column;
+}
+body > main > aside > div > span:first-child {
+  font-size: 3rem;
+  font-weight: 800;
+}
+body > main > section {
+  padding: 20px;
+}
+body > main > section > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  height: 40px;
+  border-radius: 20px;
+  margin-block: 20px;
+}
+body > main > section > h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+body > main > section > div > .title {
+  margin-left: 10px;
+}
+body > main > section > div > p:last-child {
+  position: absolute;
+  right: 10px;
+}
+body > main > section > div > p:last-child > span {
+  font-weight: 800;
+}
+body > main > section > div:nth-child(2) {
+  background-color: var(--Light-red-bg);
+  color: var(--Light-red);
+}
+body > main > section > div:nth-child(3) {
+  background-color: var(--Orangey-yellow-bg);
+  color: var(--Orangey-yellow);
+}
+body > main > section > div:nth-child(4) {
+  background-color: var(--Green-teal-bg);
+  color: var(--Green-teal);
+}
+body > main > section > div:nth-child(5) {
+  background-color: var(--Cobalt-blue-bg);
+  color: var(--Cobalt-blue);
+}
+body > main > section > button {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--Dark-gray-blue);
+}
+body > main > section > button:hover {
+  transition: all ease .6s;
+  background: var(--left-side-bg);
+}
